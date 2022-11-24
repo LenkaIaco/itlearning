@@ -14,7 +14,7 @@ public class O4_Unarne {
 
 		// unarne operatory operuju nad jednym argumentom
 
-		// unarne plus nema prakticky vyznam
+		// unarne plus nema prakticky vyznam, lebo neprevracia hodnotu
 		System.out.println(+a);
 
 		// unarne minus urobi matematicku operaciu *(-1), teda z kladneho cisla zaporne
@@ -23,7 +23,7 @@ public class O4_Unarne {
 
 		// operator inkrementacie zvysi ciselnu hodnotu o jednotku
 		// ak je pouzity za premennou, tak najprv sa "pouzije" premenna az potom sa zvysi jej hodnota
-		System.out.println(a++);
+		System.out.println(a++);//najprv daj vysledok ako Integer a potom zvys o 1. VERSUS System.out.println(++b); najprv zvys a potom daj vysledok
 		System.out.println(a);
 
 		// operator inkrementacie na desatinnom cisle
