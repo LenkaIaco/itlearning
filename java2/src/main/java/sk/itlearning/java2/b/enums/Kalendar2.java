@@ -1,6 +1,6 @@
 package sk.itlearning.java2.b.enums;
 
-public enum Kalendar2 {
+public enum Kalendar2 {//enum je spec.typ triedy kde mozem na zaciatku jednoduchsie vymenovat mesiace: Januar, Februar, ..December;
 	
 	Januar("Priemerna teplota pre Januar su 2 stupne"),
 	Februar("Priemerna teplota pre Februar su 3 stupne"),
@@ -15,13 +15,13 @@ public enum Kalendar2 {
 	November("Priemerna teplota pre November je 6 stupnov"),
 	December("Priemerna teplota pre December su 2 stupne");
 
-	private String priemTeplota; //premenne
+	private String priemTeplota; //pomocna premenne
 
-	private Kalendar2(String priemTeplota) {   // konstruktory
+	private Kalendar2(String priemTeplota) {   // konstruktory. napisal som vlastny konstr.s1 parametrom, java na pozati skonstruuje objekt typu kalendar. Pri konstrukcii nveho obj treba pri premennych konstantach hore okrem mena mesiacov pridat aj jej previazanu hodnotu v ()
 		this.priemTeplota = priemTeplota;
 	}
 
-	public String getPriemTeplota() {   // metody
+	public String getPriemTeplota() {   // metody. public getter urobim aby som sa dostala k tej previazanej hodnote premennej. Potom pokracujem v SwitchEnum2 triede vid
 		return priemTeplota;
 	}
 

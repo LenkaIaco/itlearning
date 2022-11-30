@@ -8,7 +8,7 @@ public class SwitchEnum {
 
 		Kalendar mesiac = Kalendar.Marec;
 		
-
+//tu je este nevyhoda ze priem.teplota neni prepojena s mesiacom takze vid triedu Kalendar2
 		switch (mesiac) {
 		case Januar:
 			System.out.println("Priemerna teplota pre " + mesiac + " je x st.");

@@ -76,7 +76,12 @@ public class DbConnection {
 		//KONECNA VERZIA:
 		try (Connection connection = DriverManager.getConnection("jdbc:postgresql:java2","postgres", "sa");
 			Statement stmt = connection.createStatement();
-			ResultSet rs2 = stmt.executeQuery("select * from public.zakaznik")) {
+			Statement stmt2 = connection.createStatement();
+			ResultSet rs2 = stmt.executeQuery("select * from public.\"zakaznik\" where name = 'Orange'")) {//ukazka quoted DB, ktora je Case sensitive - musi byt Orange s velkym o aj Accent sensitive - keby bolo Órange tak tam treba aj dlzen, inak nenajde
+			//stmt2.execute("insert into zakaznik (name, zakid) values ('Peter', '123456')");//vpisat do databazy novy riadok. Update vidim v postgresql appke - Query sekcii
+			//insert/update/delete s nim robime, vracia iba Boolean - podarilo sa / nepodarilo sa
+
+			stmt2.execute("update zakaznik set name = 'Juraj' where name = 'Orange'"); //premenovat daky zaznam.  Update vidim v postgresql appke - Query sekcii
 			while (rs2.next()) {
 				String rodneCislo = rs2.getString("zakid");
 				String meno = rs2.getString("name");

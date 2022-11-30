@@ -4,7 +4,7 @@ public class SwitchFallThrough {
 
 	public static void main(String[] args) {
 
-		int mesiac = 8;
+		int mesiac = 8;//tu sa to od 8 az do decembra vypise. Podla toho co potrebujeme v praxi tak toto mozme vyuzit
 
 		switch (mesiac) {
 		case 1:

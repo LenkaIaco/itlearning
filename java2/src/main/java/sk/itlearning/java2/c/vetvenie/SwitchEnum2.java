@@ -6,11 +6,11 @@ public class SwitchEnum2 {
 
 	public static void main(String[] args) {
 
-				Kalendar2 mesiac = Kalendar2.Jun;
+				Kalendar2 mesiac = Kalendar2.Jun;//v juni mam uz ukrytu previazanu hodnotu z kalendar2 triedy
 
 		switch (mesiac) {
-		case Januar: System.out.println(mesiac.getPriemTeplota());
-			break;
+		case Januar: System.out.println(mesiac.getPriemTeplota());//overuje ci je to ten konkr.mesiac ak hej tak vyhodi previazanu hodnotu
+			break;//od hodnoty(mesiaca) kde sa najde zhoda tak uz dalej kod nehlada v dalsich mesiacoch. Ak nedam break, da sa to vyuzit ako v triede vid: SwitchFallThrough
 		case April: System.out.println(mesiac.getPriemTeplota());
 			break;
 		case August: System.out.println(mesiac.getPriemTeplota());

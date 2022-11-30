@@ -2,8 +2,8 @@ package sk.itlearning.java2.c.vetvenie;
 
 public class IfElseKonstanty {
 
-	public static void main(String[] args) {
-
+	public static void main(String[] args) {//viacnasobne vetvenie s pouzitim konstanty a s viacnasob.vetvenim pomocou else if + else
+// da sa to zjednodusit, vid triedu Kalendar v balicku b.enums a triedu z balika c. SwitchEnum
 		String mesiac = Konstanty.MAREC;
 
 		if (mesiac.equals(Konstanty.JANUAR)) {

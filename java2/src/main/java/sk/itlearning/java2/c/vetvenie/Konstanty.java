@@ -16,3 +16,6 @@ public class Konstanty {
 	public static final String DECEMBER = "December";
 
 }
+//v jave je const vyhradene slovicko pre konstantu ako klucove slovo ale nema ziadne pouzitie; pretoze v praxi ho nepotrebujeme. 
+//vdaka modifikacie vieme nastavit premennu ako konstantu(vid hore): static robi globalne pouzitelnu premennu, final robi ze hodnotu tej premennej uz nemozme zmenit
+// vyuzitie: napr pri viacnasobne vetvenie vid ifElseKonstanty trieda
