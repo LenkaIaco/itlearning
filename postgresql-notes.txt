@@ -1,0 +1,3 @@
+insert into zakaznik (zakid, name) values ('123456', 'Orange');
+
+select * from Zakaznik;
