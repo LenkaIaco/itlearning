@@ -46,7 +46,7 @@ public class Signatura {
 		return "Toto je regulerny overload - zmenila sa signatura";
 	}
 
-	// Toto by nefungovalo, metoda s rovnakou signaturou uz existuje, nestaci zmenit navratovy typ
+	// Toto by nefungovalo, metoda s rovnakou signaturou uz existuje, nestaci zmenit navratovy typ String to Integer. 
 //	private Integer toString() {
 //		return "Pokus o overload zmenenim navratoveho typu";
 //	}

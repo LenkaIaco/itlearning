@@ -12,7 +12,7 @@ public class Equals {
 
 		System.out.println(f1 == f2); // nespravne porovnavanie objektov
 
-		System.out.println(f1.equals(f2));
+		System.out.println(f1.equals(f2));//toto je uz prepisana metoda z Obcan
 
 		System.out.println(f1);
 

@@ -5,7 +5,8 @@ public class Member {
 	// 1 clenske premenne
 	int a;
 	private static int b;
-
+//private static int b = 12  ak priradzujeme hodnotu do statickej premennej mozme to dat do inicializacneho bloku stat. premennych vid dole
+	
 	// 2 clenske metody
 	void a() { }
 
@@ -22,7 +23,7 @@ public class Member {
 		super();
 	}
 
-	// 4 vnorene triedy
+	// 4 vnorene triedy - v praxi iba podla potreby, velmi zriedka sa pouziva
 	// vnorena nestaticka - inner class
 	class X {
 		void test() {
@@ -39,13 +40,22 @@ public class Member {
 		}
 	}
 
-	// 5 inicializacne bloky
+	// 5 inicializacne bloky - tiez staticke a nestat.
 	{
-		a = 8;
+		a = 8;//nestaticky inicializacny blok. Ak sa opakuje pri inicializacii roznych nestatickych objektov vnutri rovnaky kod mozem spolocne hore inicializovat vsetky a dnu dat raz ten kod. Tiez sa pouz.zriedka
 	}
 
-	static {
-		b = 5;
+	static {//staticke inic.bloky sa v praxi pouzivaju casto. 
+//		b = 5;
+//		 mozme napisat: 
+	String username = System.getenv("USERNAME");// - vypluje premennu operacneho systemu username, jej hodnotu, kto zrovna pouziva pc
+	String user;
+	if (username != null) {
+		user = username;
+	}else { user = "UNKNOWN";
+	}
+	
+	
 	}
 
 }

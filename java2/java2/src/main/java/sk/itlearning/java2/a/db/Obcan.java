@@ -52,7 +52,7 @@ public class Obcan implements Zakaznik {
 	}
 	
 	@Override
-	public String toString() {
+	public String toString() {//keby nebola override tak toString defaultne je naprogramovana vyplut hashcode a ine veci, kt.nepotrebujeme
 		return "Zakaznik; typ Obcan; RC = " + rodneCislo + "; Meno = " + meno;
 	}
 	
@@ -67,8 +67,9 @@ public class Obcan implements Zakaznik {
 	}
 	
 	@Override
-	public int hashCode() {
-		return Objects.hash(this.meno, this.kredit, this.rodneCislo);
+	public int hashCode() {//pravidlo v Jave, ak sa prepisuje metoda equals tak treba prepisat aj metodu hashcode aby dala jedinecny hash. 
+		//Lebo framework pri pouzivani tej triedy equals s overridom sa na to spolieha a program moze spadnut ak sa neprepise aj hash metoda
+		return Objects.hash(this.meno, this.kredit, this.rodneCislo);//ak budem mat 2 rozne objekty s rovnakym obsahom(Override hore), tak mi vypluje aj jedinecny hash
 	}
 	
 }
